@@ -9,8 +9,6 @@ while rep != 'N':
     print('3 ----- Pão com almondêga ---- R$ 9.00')
     print('---------------------------------------')
 
-    while rep != 'S'
-
     prod = str(input('Escolha o código de um produto: ')) # Recebe o código do produto
 
     if prod != '1' and prod != '2' and prod !='3' and prod !='4': # Condição para código inválido
