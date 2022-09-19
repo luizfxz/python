@@ -11,71 +11,59 @@ connect = mysql.connector.connect(
     )
 
 
-'''def salvar_dados():
-    
-
-
-    linha1 = input(cadastronew.nome.text())
-
-    linha2 = input(cadastronew.email.text())
-
-    linha3 = input(cadastronew.senha.text())
-
-    linha4 = input(cadastronew.cep.text())
-
-    linha5 = input(cadastronew.telefone.text())
-
-    linha6 = input(cadastronew.endereco.text())
-
-    linha7 = input(cadastronew.nasc.text())
-
-    linha8 = input(cadastronew.cpf.text())
-
-
-    cursor = connect.cursor()
-
-    inserir = """ INSERT INTO fornecedor (id, nome, email, senha, cep, telefone, endereco, nasc, cpf) values (null, %s,%s,%s,%s,%s, %s, %s, %s)"""
-    
-    dados = (str(linha1), str(linha2), str(linha3), str(linha4), str(linha5), str(linha6), str(linha7), str(linha8))
-
-    cursor.execute(inserir, dados)
-
-    connect.commit()
-    
-    print('Cadastro concluído!')
-
-    cursor.close()
-    print('Conexão encerrada!')'''
-
-def logar():
-    
-    global login
-
-    login = loginkkk.login.text()
-
-    senha = loginkkk.senha.text()
-
-    cursor = connect.cursor()
-    
-    consulta = ("select nome, senha from login where nome  = '{}' and senha = '{}'".format(login, senha))
-
-    cursor.execute (consulta)
-
-    senhabd = cursor.fetchall()
-
-    if senha == senhabd[0][0]:
-        loginkkk.close()
-        cadastronew.show()
-
-    else:
-        print('Dados incorretos!')
-
 # Função para mostrar a tela de cadastro e esconder a tela de login
 
 def chama_segunda_tela(): 
-    cadastronew.show()
+    
+    global nomel
+
+    nomel = loginkkk.login.text()
+
+    senhap = loginkkk.senha.text()
+
+    cursor = connect.cursor()
+
+    cursor.execute("SELECT nome, senha FROM login WHERE nome = '{}' and senha  = '{}'".format(nomel, senhap))
+
+    for (nome, senha) in cursor:
+        if nomel == nome or senhap == senha:
+
+            loginkkk.hide()
+            telavendas.show()
+    else:
+        #loginkkk.error.setText('Usuário ou senha inválida')
+        print('Dados inválidos!')
+
+def registro():
+
+    nomel = cadastronew.nome.text()
+
+    emaill = cadastronew.email.text()
+
+    senhal = cadastronew.senha.text()
+
+    cepl = cadastronew.cep.text()
+
+    telefonel= cadastronew.telefone.text()
+
+    enderecol = cadastronew.endereco.text()
+
+    nascl = cadastronew.nasc.text()
+
+    cpfl = cadastronew.cpf.text()
+
+    
+    inserir_d = ("INSERT INTO cadastro (id, nome, email, senha, cep, telefone, endereco, nasc, cpf) values (null, %s, %s, %s, %s, %s, %s, %s, %s)")
+    campos = (nomel, emaill, senhal, cepl, telefonel, enderecol, nascl, cpfl)
+
+    cursor = connect.cursor()
+    cursor.execute(inserir_d, campos)
+    connect.commit()
+
+def tela_cadastro():
     loginkkk.hide()
-   
+    cadastronew.show()
+
 # Função para mostrar a tela de catalogo e esconder a tela de cadastro
 
 def chama_terceira_tela():
@@ -174,12 +162,13 @@ fornecedor=uic.loadUi('fornecedor.ui') # Inicializador da tela de cadastro de fo
 client=uic.loadUi('client.ui') # Inicializador da tela de cadastro de cliente
 
 
-loginkkk.kkk.clicked.connect(chama_segunda_tela) # Botão de entrar da tela de login
+loginkkk.entrar.clicked.connect(chama_segunda_tela) # Botão de entrar da tela de login
 
+loginkkk.kkk.clicked.connect(tela_cadastro)
 
-cadastronew.incresverse.clicked.connect(chama_terceira_tela) # Botão de inscrever-se da tela de login
+cadastronew.incresverse.clicked.connect(registro) # Botão de inscrever-se da tela de login
 
-# loginkkk.entrar.clicked.connect(chama_quarta_tela) # Botão de entrar da tela de login para tela de escolha
+#oginkkk.entrar.clicked.connect(chama_quarta_tela) # Botão de entrar da tela de login para tela de escolha
 
 telavendas.vendas.clicked.connect(chama_quinta_tela) # Botão de 'cadastro de vendas' da tela de escolha para o cadastro de vendas
 
