@@ -1,3 +1,5 @@
+<!-- Mudanças de design da tela meiri-login --!>
+
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Form</class>
@@ -6,9 +8,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>699</width>
-    <height>818</height>
+    <width>480</width>
+    <height>559</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>480</width>
+    <height>569</height>
+   </size>
   </property>
   <property name="font">
    <font>
@@ -16,11 +30,11 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>KKKKK</string>
+   <string>Login</string>
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>Users/895527/Downloads/espingarda-de-assalto.png</normaloff>Users/895527/Downloads/espingarda-de-assalto.png</iconset>
+    <normaloff>C:/Users/Luiz/Downloads/diamond-removebg-preview.png</normaloff>C:/Users/Luiz/Downloads/diamond-removebg-preview.png</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -31,17 +45,17 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>20</y>
-     <width>601</width>
-     <height>351</height>
+     <x>10</x>
+     <y>30</y>
+     <width>461</width>
+     <height>261</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>design/imgs/logofundo.png</pixmap>
+    <pixmap>../Ss1/Ss1_html_css/python/biju_meiri/logofundo.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -50,7 +64,7 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>70</x>
      <y>590</y>
      <width>243</width>
      <height>218</height>
@@ -75,17 +89,17 @@
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>550</y>
-     <width>31</width>
-     <height>21</height>
+     <x>129</x>
+     <y>380</y>
+     <width>21</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>design/imgs/cadeado20.png</pixmap>
+    <pixmap>../Ss1/Ss1_html_css/python/biju_meiri/cadeado20.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>false</bool>
@@ -94,57 +108,106 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>510</y>
-     <width>21</width>
-     <height>21</height>
+     <x>130</x>
+     <y>340</y>
+     <width>20</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>design/imgs/user.png</pixmap>
+    <pixmap>../Ss1/Ss1_html_css/python/biju_meiri/user.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QLineEdit" name="login">
+  <widget class="QLineEdit" name="caixa_login">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>510</y>
-     <width>151</width>
-     <height>20</height>
+     <x>160</x>
+     <y>340</y>
+     <width>181</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777213</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Nirmala UI</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-border: 1px solid black;
-border-radius: 3px;
+    <string notr="true">QLineEdit
+{
+background-color: rgb(255, 255, 255);
+border: 1px solid #ffffff;
+border-radius:	8px;
+}
+
+QLineEdit::focus {
+border: 2px solid #000000;
+}
+
 </string>
+   </property>
+   <property name="inputMask">
+    <string/>
    </property>
    <property name="text">
     <string/>
    </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
    <property name="placeholderText">
     <string>Login...</string>
    </property>
+   <property name="clearButtonEnabled">
+    <bool>false</bool>
+   </property>
   </widget>
-  <widget class="QLineEdit" name="senha">
+  <widget class="QLineEdit" name="caixa_Senha">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>550</y>
-     <width>151</width>
-     <height>20</height>
+     <x>160</x>
+     <y>380</y>
+     <width>181</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Nirmala UI</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
-border: 1px solid black;
-border-radius: 3px;
+    <string notr="true">QLineEdit
+{
+background-color: rgb(255, 255, 255);
+border: 1px solid #ffffff;
+border-radius:	8px;
+}
+
+QLineEdit::focus {
+border: 2px solid #000000;
+}
+
 </string>
    </property>
    <property name="echoMode">
@@ -154,80 +217,104 @@ border-radius: 3px;
     <string>Senha...</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="entrar">
+  <widget class="QPushButton" name="login_entrar">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>650</y>
+     <x>160</x>
+     <y>440</y>
      <width>75</width>
      <height>23</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Nirmala UI</family>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+    <string notr="true">QPushButton {
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+	border-radius: 8px;
+
+}
+
+QPushButton::hover {
+
+	color: rgb(255, 255, 255);
+	border: 1px solid #ffffff;
+
+}</string>
    </property>
    <property name="text">
     <string>ENTRAR</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="kkk">
+  <widget class="QPushButton" name="login_registrar">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>700</y>
+     <x>250</x>
+     <y>440</y>
      <width>91</width>
      <height>23</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Nirmala UI</family>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+    <string notr="true">QPushButton {
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+	border-radius: 8px;
+
+}
+
+QPushButton::hover {
+
+	color: rgb(255, 255, 255);
+	border: 1px solid #ffffff;
+
+}</string>
    </property>
    <property name="text">
-    <string>REGISTRAR-SE</string>
+    <string>REGISTRAR</string>
    </property>
-  </widget>
-  <widget class="QCheckBox" name="checkBox">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>590</y>
-     <width>111</width>
-     <height>17</height>
-    </rect>
+   <property name="checkable">
+    <bool>false</bool>
    </property>
-   <property name="text">
-    <string>SALVAR LOGIN</string>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="autoDefault">
+    <bool>true</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
   <zorder>label_2</zorder>
   <zorder>label</zorder>
   <zorder>label_4</zorder>
   <zorder>label_3</zorder>
-  <zorder>login</zorder>
-  <zorder>senha</zorder>
-  <zorder>entrar</zorder>
-  <zorder>kkk</zorder>
-  <zorder>checkBox</zorder>
+  <zorder>caixa_login</zorder>
+  <zorder>caixa_Senha</zorder>
+  <zorder>login_entrar</zorder>
+  <zorder>login_registrar</zorder>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>entrar</sender>
-   <signal>clicked()</signal>
-   <receiver>Form</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>377</x>
-     <y>661</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>349</x>
-     <y>408</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
