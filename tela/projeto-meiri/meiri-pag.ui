@@ -1,3 +1,5 @@
+<!--Mudanças de design-->
+
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Form</class>
@@ -6,9 +8,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>678</width>
-    <height>638</height>
+    <width>650</width>
+    <height>650</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>650</width>
+    <height>650</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -26,7 +34,10 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">
+background-color: rgb(255, 255, 255);
+
+</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -113,16 +124,16 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>190</y>
+      <x>65</x>
+      <y>200</y>
       <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
-      <pointsize>12</pointsize>
+      <family>Nirmala UI</family>
+      <pointsize>11</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -140,6 +151,29 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit
+{
+background-color: rgb(255, 255, 255);
+border: 1px solid #000000;
+border-radius:	8px;
+
+}
+
+QLineEdit::focus {
+border: 2px solid #000000;
+}
+</string>
+    </property>
+    <property name="inputMask">
+     <string>9999 9999 9999 9999</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_2">
     <property name="geometry">
@@ -149,6 +183,28 @@
       <width>151</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit
+{
+background-color: rgb(255, 255, 255);
+border: 1px solid #000000;
+border-radius:	8px;
+}
+
+QLineEdit::focus {
+border: 2px solid #000000;
+}
+</string>
+    </property>
+    <property name="inputMask">
+     <string>99/99/9999</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_3">
@@ -160,19 +216,41 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Nirmala UI</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit
+{
+background-color: rgb(255, 255, 255);
+border: 1px solid #000000;
+border-radius:	8px;
+}
+
+QLineEdit::focus {
+border: 2px solid #000000;
+}
+</string>
+    </property>
+    <property name="inputMask">
+     <string>9999</string>
+    </property>
    </widget>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>300</y>
-      <width>171</width>
-      <height>31</height>
+      <x>64</x>
+      <y>315</y>
+      <width>141</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
+      <family>Nirmala UI</family>
       <pointsize>12</pointsize>
       <weight>75</weight>
       <bold>true</bold>
@@ -185,15 +263,15 @@
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>300</y>
-      <width>171</width>
-      <height>31</height>
+      <x>247</x>
+      <y>316</y>
+      <width>41</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
+      <family>Nirmala UI</family>
       <pointsize>12</pointsize>
       <weight>75</weight>
       <bold>true</bold>
@@ -201,27 +279,6 @@
     </property>
     <property name="text">
      <string>CVV</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>401</y>
-      <width>131</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>10</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>SALVAR DADOS</string>
     </property>
    </widget>
    <widget class="QPushButton" name="FINALIZAR">
@@ -234,8 +291,20 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(255, 255, 255);</string>
+     <string notr="true">QPushButton {
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+	border-radius: 8px;
+
+}
+
+QPushButton::hover {
+
+	color: rgb(255, 255, 255);
+	border: 1px solid #ffffff;
+
+}</string>
     </property>
     <property name="text">
      <string>FINALIZAR</string>
@@ -249,6 +318,9 @@ color: rgb(255, 255, 255);</string>
       <width>16</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>RadioButton</string>
@@ -278,20 +350,20 @@ color: rgb(255, 255, 255);</string>
      <rect>
       <x>110</x>
       <y>110</y>
-      <width>111</width>
+      <width>121</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
-      <pointsize>10</pointsize>
+      <family>Nirmala UI</family>
+      <pointsize>11</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>Cartão de credito</string>
+     <string>Cartão de crédito</string>
     </property>
    </widget>
    <widget class="QRadioButton" name="radioButton_2">
@@ -312,14 +384,14 @@ color: rgb(255, 255, 255);</string>
      <rect>
       <x>320</x>
       <y>110</y>
-      <width>121</width>
+      <width>131</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
-      <pointsize>10</pointsize>
+      <family>Nirmala UI</family>
+      <pointsize>11</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -357,8 +429,20 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(255, 255, 255);</string>
+     <string notr="true">QPushButton {
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+	border-radius: 8px;
+
+}
+
+QPushButton::hover {
+
+	color: rgb(255, 255, 255);
+	border: 1px solid #ffffff;
+
+}</string>
     </property>
     <property name="text">
      <string>VOLTAR</string>
@@ -368,15 +452,15 @@ color: rgb(255, 255, 255);</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>24</y>
-     <width>251</width>
+     <x>150</x>
+     <y>30</y>
+     <width>241</width>
      <height>47</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Arial Black</family>
+     <family>Nirmala UI</family>
      <pointsize>26</pointsize>
      <weight>75</weight>
      <bold>true</bold>
@@ -411,7 +495,7 @@ color: rgb(255, 255, 255);</string>
      <x>480</x>
      <y>80</y>
      <width>201</width>
-     <height>581</height>
+     <height>571</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -426,15 +510,15 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label_14">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>50</y>
+      <x>40</x>
+      <y>20</y>
       <width>201</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
+      <family>Nirmala UI</family>
       <pointsize>12</pointsize>
       <weight>75</weight>
       <bold>true</bold>
@@ -444,7 +528,7 @@ color: rgb(255, 255, 255);</string>
      <string notr="true">background-color: rgb(255, 255, 255,0);</string>
     </property>
     <property name="text">
-     <string>PRODUTOS:</string>
+     <string>Produtos:</string>
     </property>
    </widget>
    <widget class="Line" name="line">
@@ -452,7 +536,7 @@ color: rgb(255, 255, 255);</string>
      <rect>
       <x>0</x>
       <y>450</y>
-      <width>171</width>
+      <width>201</width>
       <height>16</height>
      </rect>
     </property>
@@ -466,7 +550,7 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label_15">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>33</x>
       <y>480</y>
       <width>201</width>
       <height>21</height>
@@ -474,7 +558,7 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
+      <family>Nirmala UI</family>
       <pointsize>12</pointsize>
       <weight>75</weight>
       <bold>true</bold>
@@ -498,15 +582,28 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
-      <pointsize>12</pointsize>
+      <family>Nirmala UI</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">QLineEdit
+{
+background-color: rgb(255, 255, 255);
+border: 1px solid #000000;
+border-radius:	8px;
+}
+
+QLineEdit::focus {
+border: 2px solid #000000;
+}
+</string>
+    </property>
+    <property name="inputMask">
+     <string>R$ 99999,99</string>
     </property>
     <property name="text">
-     <string/>
+     <string>R$ ,</string>
     </property>
    </widget>
   </widget>
