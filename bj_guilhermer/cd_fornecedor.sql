@@ -1,1 +1,0 @@
-SELECT * FROM bjmeire.cd_fornecedor;
